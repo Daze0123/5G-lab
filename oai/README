@@ -1,1 +1,7 @@
-TBD
+Start with:
+
+B210:
+sudo taskset -c 0-11 chrt -f 99 ./nr-softmodem -O b210_332G_40mhz.conf -E --continuous-tx
+
+X310:
+sudo taskset -c 0-11 chrt -f 99 ./nr-softmodem -O x310_332G_40mhz.conf --usrp-tx-thread-config 1 --tune-offset 24000000 -E
