@@ -8,4 +8,4 @@ echo "Binding NIC to vfio-pci..."
 sudo dpdk-devbind.py -b vfio-pci 0000:02:00.1 
 
 echo "Launching OAI..."
-sudo taskset -c 0-11 chrt -f 99 ./nr-softmodem -O x310_332G.conf --usrp-tx-thread-config 1 --tune-offset 24000000 -E
+sudo taskset -c 0-11 chrt -f 99 ./nr-softmodem -O x310_332G_40mhz.conf --usrp-tx-thread-config 1 --tune-offset 24000000 -E
